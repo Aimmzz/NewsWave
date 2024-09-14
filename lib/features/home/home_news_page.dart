@@ -10,6 +10,8 @@ class HomeNewsPage extends StatefulWidget {
 class _HomeNewsPageState extends State<HomeNewsPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Center(
+      child: Text('Ini Haalaman Home'),
+    );
   }
 }
