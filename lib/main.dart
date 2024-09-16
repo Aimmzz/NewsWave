@@ -61,6 +61,7 @@ class _BottomBarState extends State<BottomBar> {
         ),
         child: BottomAppBar(
           color: Colors.white,
+          elevation: 8.0,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
