@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_wave/constants/color_values.dart';
 import 'package:news_wave/constants/sizes.dart';
+import 'package:news_wave/widgets/text_title.dart';
 
 class HeaderHome extends StatelessWidget {
   const HeaderHome({super.key});
@@ -41,15 +42,7 @@ class HeaderHome extends StatelessWidget {
             child: Row(
               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  'For You',
-                  style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: TextSize.header,
-                      color: ColorsValues.mainBlack,
-                      fontWeight: FontWeight.bold
-                    ),
-                ),
+                TextTitle(title: 'For You'),
                 const Spacer(),
                 IconButton(
                     onPressed: () {},
