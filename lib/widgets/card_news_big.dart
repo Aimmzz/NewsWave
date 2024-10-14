@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:news_wave/constants/sizes.dart';
+import 'package:news_wave/model/news.dart';
 
 class CardNewsBig extends StatelessWidget {
-  const CardNewsBig({super.key});
+  final News news;
+
+  const CardNewsBig({super.key, required this.news});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +16,8 @@ class CardNewsBig extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: Colors.white,
-        image: const DecorationImage(
-          image: AssetImage('assets/images/vespa.jpg'),
+        image: DecorationImage(
+          image: AssetImage(news.image),
           fit: BoxFit.cover,
         )
       ),
@@ -28,8 +31,8 @@ class CardNewsBig extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'CNN Indonesia',
+                Text(
+                  news.source,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: TextSize.regular,
@@ -37,8 +40,8 @@ class CardNewsBig extends StatelessWidget {
                   ),
                 ),
                 gapH4,
-                const Text(
-                  'Vespa Revolution: Navigating The Scooter Scene',
+                Text(
+                  news.title,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: TextSize.header,
@@ -47,8 +50,9 @@ class CardNewsBig extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    const Text(
-                      '8 min read',
+                    Text(
+                      // '8 min read',
+                      news.readTime,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: TextSize.regular,
@@ -61,8 +65,9 @@ class CardNewsBig extends StatelessWidget {
                       color: Colors.white,
                     ),
                     gapW4,
-                    const Text(
-                      '2 hr ago',
+                    Text(
+                      // '2 hr ago',
+                      news.time,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: TextSize.regular,

@@ -16,37 +16,39 @@ class HomeNewsPage extends StatefulWidget {
 class _HomeNewsPageState extends State<HomeNewsPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          color: Colors.white,
-          child: const SafeArea(
-            top: true,
-            bottom: false,
-            child: HeaderHome(),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Container(
+            color: Colors.white,
+            child: const SafeArea(
+              top: true,
+              bottom: false,
+              child: HeaderHome(),
+            ),
           ),
-        ),
-        const TabBarCategory(),
-        gapH8,
-        Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              TextTitle(title: 'Following'),
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.add,
-                  color: ColorsValues.mainBlack,
-                  size: 30.0,
-                )
-              ),
-            ],
+          const TabBarCategory(),
+          gapH8,
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                TextTitle(title: 'Following'),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.add,
+                    color: ColorsValues.mainBlack,
+                    size: 30.0,
+                  )
+                ),
+              ],
+            ),
           ),
-        ),
-        CardNews()
-      ],
+          CardNews()
+        ],
+      ),
     );
   }
 }
