@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:news_wave/constants/color_values.dart';
+import 'package:news_wave/features/discover/body_discover.dart';
+import 'package:news_wave/widgets/header_discover.dart';
 
 class DiscoverPage extends StatefulWidget {
   const DiscoverPage({super.key});
@@ -10,8 +13,17 @@ class DiscoverPage extends StatefulWidget {
 class _DiscoverPageState extends State<DiscoverPage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Ini Haalaman Discover'),
+    return Scaffold(
+      backgroundColor: ColorsValues.backgroundApp,
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            HeaderDiscover(),
+            BodyDiscover()
+          ],
+        ),
+      ),
     );
   }
 }

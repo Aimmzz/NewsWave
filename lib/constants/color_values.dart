@@ -4,4 +4,6 @@ class ColorsValues {
   static const mainBlack = Color(0XFF18272A);
   static const mainGrey = Color(0XFF8B8C8B);
   static const backgroundApp = Color(0XFFE5E5EA);
+  static const hitGrey = Color(0XFF8b8c8b);
+  static const darkGrey = Color(0XFF858484);
 }
